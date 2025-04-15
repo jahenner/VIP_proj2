@@ -1,0 +1,28 @@
+name: geosmile
+channels:
+  - conda-forge  # Generally preferred first for broader package availability
+  - defaults     # Anaconda's default channel
+  # The anaconda.com/pkgs/ channels are usually covered by 'defaults'
+dependencies:
+  # --- Core Python ---
+  - python=3.11  # Specify a version constraint if needed, e.g., >=3.8, ==3.10.*
+  - pip
+
+  # --- Essential Scientific Libraries ---
+  # List the main packages your code imports/uses.
+  # Conda will pull in their dependencies (numpy-base, blas, mkl*, hdf5, etc.)
+  - numpy
+  - scipy
+  - netcdf4     # Requires hdf5, cftime, udunits2 etc.
+  - ncview
+
+  # --- Performance/Computation ---
+  - numba       # Requires llvmlite
+
+  # --- Build/Packaging Tools (Often useful, usually cross-platform) ---
+  # Keep these if you install complex packages or build things
+  - setuptools
+  - wheel
+  - build
+  - pyproject_hooks
+  - packaging
