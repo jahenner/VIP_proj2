@@ -27,7 +27,7 @@ def main():
 
         runoptics_args = ['--name', os.path.join(os.getcwd(), 'geosparticles/bc.json')]
         sys.argv = [str(runoptics_path)] + runoptics_args
-        print(f"\nRunning {runoptics_path} with argv: {" ".join(sys.argv)}")
+        print(f"\nRunning {runoptics_path} with argv: {' '.join(sys.argv)}")
         runpy.run_path(str(runoptics_path), run_name="__main__")
 
         # --- Run runbands.py ---
@@ -37,7 +37,7 @@ def main():
 
         runbands_args = ["--filename", os.path.join(os.getcwd(), "optics_bc.nomom.nc4")]
         sys.argv = [str(runbands_path)] + runbands_args
-        print(f"\nRunning {runbands_path} with argv: {" ".join(sys.argv)}")
+        print(f"\nRunning {runbands_path} with argv: {' '.join(sys.argv)}")
         runpy.run_path(str(runbands_path), run_name="__main__")
 
     finally:
