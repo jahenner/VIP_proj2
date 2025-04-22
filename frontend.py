@@ -40,7 +40,7 @@ def prompt_json(prompt):
             print("Invalid JSON. Please enter a valid JSON structure, e.g., [[0.0118e-6]] or {\"r0\":[[0.0118e-6]]}")
 
 
-def main():
+def geosmie_get_particle():
     print("=== GEOSmie JSON Configuration CLI ===")
 
     # 1) JSON filename
@@ -104,7 +104,9 @@ def main():
         json.dump(data, f, indent=4)
 
     print(f"Wrote configuration to '{file_name}'")
+    return file_name
 
 
 if __name__ == "__main__":
-    main()
+    geosmie_get_particle()
+    

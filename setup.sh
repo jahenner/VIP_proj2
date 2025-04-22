@@ -3,7 +3,7 @@
 CONDA_ENV_NAME="geosmile"
 ENV_FILE_PATH="environment.yml"
 GIT_REPO_URL="https://github.com/GEOS-ESM/GEOSmie.git"
-REPO_DIR_NAME="../GEOSmie"
+REPO_DIR_NAME="GEOSmie"
 HOSTNAME_CHECK="gatech.edu"
 
 # --- Handle Git Repository ---
@@ -20,13 +20,13 @@ else
 fi
 
 
-cp "../VIP_PROJ2/${ENV_FILE_PATH}" .
+cp "../${ENV_FILE_PATH}" .
 
 echo "--> Checking for Conda environment: ${CONDA_ENV_NAME}"
 
 HOSTNAME=$(hostname)
 if [[ "$HOSTNAME" == *"$HOSTNAME_CHECK"* ]]; then
-    echo "--> Working on ICE"
+    echo "--> Working on ICE loading anaconda3"
     module load anaconda3
 else
     echo "--> Working locally"
@@ -50,6 +50,7 @@ else
     # Need to source again potentially before activating newly created env
     source "${CONDA_BASE_PATH}/etc/profile.d/conda.sh"
     source activate base
+    sleep 1
     conda activate "${CONDA_ENV_NAME}"
     if [ $? -ne 0 ]; then echo "!!! Conda activate FAILED."; exit 1; fi
 fi
