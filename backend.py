@@ -121,6 +121,9 @@ def compute_mie(fname: str):
 
 if __name__ == "__main__":
     test_fname = "geosparticles/bc.json"
-    compute_mie(test_fname)
+    if len(sys.argv) < 2:
+        compute_mie(test_fname)
+    else:
+        compute_mie(sys.argv[1])
     # test_bands_fname = "optics_bc.nomom.nc4"
     # runbands(test_bands_fname)
