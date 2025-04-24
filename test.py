@@ -6,7 +6,7 @@ import os
 import sys
 import pathlib
 
-def main():
+def geos_runner():
     runner_script_dir = pathlib.Path(__file__).parent.resolve()
     geosmie_dir = runner_script_dir / "GEOSmie"
     runoptics_path = geosmie_dir / "runoptics.py"
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     profiler.enable()
     tracemalloc.start()
 
-    main()
+    geos_runner()
 
     profiler.disable()
     stats = pstats.Stats(profiler).sort_stats('calls')
@@ -60,3 +60,9 @@ if __name__ == "__main__":
     tracemalloc.stop()
     print(f"Current memory usage: {current / 1024:.2f} KiB")
     print(f"Peak memory usage: {peak / 1024:.2f} KiB")
+    
+    
+    
+    
+    
+    
