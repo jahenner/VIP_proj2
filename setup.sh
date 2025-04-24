@@ -59,3 +59,5 @@ echo "--> Setting up pymiecoated"
 cd pymiecoated
 python setup.py install
 cd ..
+
+conda activate "${CONDA_ENV_NAME}"
