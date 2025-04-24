@@ -1,0 +1,42 @@
+project:
+  name: "GEOSmie"
+  description: "Calculate single-scattering and bulk optical properties for both individual wavelengths and wavelength bands"
+  homepage: https://github.com/jahenner/VIP_proj2
+  authors:
+    - Alex Henner
+    - Sherry Li
+    - Timi Omoteso
+    - Steve Han
+  tags:
+    - GEOS-ESM
+    - Particles
+    - Wavelengths
+    - Scattering
+
+workspace:
+  location: /workspace
+  resources:
+    min_cpu: 4
+    min_gpu: 0
+    min_mem: 0
+    gpu_mem: 1024
+  model_collection: []
+  data_collection:
+  - source: cybershuttle
+    identifier: GEOSmie
+    mount_point: /cybershuttle_data/GEOSmie
+
+additional_dependencies:
+  conda:
+    - python=3.11
+    - pip
+    - numpy
+    - scipy
+    - ncview
+    - numba
+    - setuptools
+    - wheel
+    - build
+    - pyproject_hooks
+    - packaging
+  pip: []
