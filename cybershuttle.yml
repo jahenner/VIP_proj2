@@ -8,6 +8,8 @@ project:
     - Timi Omoteso
     - Steve Han
   tags:
+    - airavata-courses
+    - spring-2025
     - GEOS-ESM
     - Particles
     - Wavelengths
@@ -22,8 +24,8 @@ workspace:
     gpu_mem: 1024
   model_collection:
     - source: cybershuttle
-    identifier: GEOSmie
-    mount_point: /cybershuttle_data/GEOSmie
+      identifier: airavata-courses-GEOSmie
+      mount_point: /cybershuttle_data/airavata-courses-GEOSmie
   data_collection: []
 
 additional_dependencies:
