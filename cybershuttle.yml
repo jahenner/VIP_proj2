@@ -20,11 +20,11 @@ workspace:
     min_gpu: 0
     min_mem: 0
     gpu_mem: 1024
-  model_collection: []
-  data_collection:
-  - source: cybershuttle
+  model_collection:
+    - source: cybershuttle
     identifier: GEOSmie
     mount_point: /cybershuttle_data/GEOSmie
+  data_collection: []
 
 additional_dependencies:
   conda:
