@@ -3,10 +3,10 @@ project:
   description: "Calculate single-scattering and bulk optical properties for both individual wavelengths and wavelength bands"
   homepage: https://github.com/jahenner/VIP_proj2
   authors:
-    - Alex Henner
-    - Sherry Li
-    - Timi Omoteso
-    - Steve Han
+    - jhenner3@gatech.edu
+    - sli933@gatech.edu
+    - oomoteso3@gatech.edu
+    - yhan405@gatech.edu
   tags:
     - airavata-courses
     - spring-2025
